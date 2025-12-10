@@ -1,0 +1,86 @@
+9-Dec-25	Github Static Website
+cd .\test1
+git init
+git status
+git add .
+git commit -m "Initial commit"
+git remote add origin https://github.com/aravisg/test1.git
+git branch -M main
+git push -u origin main
+
+git branch
+git remote -v
+git remote set-url origin https://github.com/aravisg/test1.git
+
+Enable GitHub Pages
+1.	Go to your repo
+2.	Click Settings
+3.	Left sidebar → Pages
+4.	Under Source:
+o	Choose: Deploy from branch
+o	Branch: main
+o	Folder: root
+5.	Click Save
+GitHub will deploy your site automatically.
+
+After ~20 seconds:
+https://aravisg.github.io/test1/Page1.htm
+
+Create a new app
+https://share.streamlit.io
+"New app" → Select your GitHub repository
+Then choose:
+Repo: your repo name
+Branch: main
+Main file: app.py
+
+Within ~30–60 seconds your app will be live.
+
+------------------------------
+8-Dec-25	streamlit demo
+
+cd ..
+git init
+
+git config --global user.name "Ravi"
+git config --global user.email "aravisg@gmail.com"
+
+git remote remove origin
+git remote add origin https://github.com/aravisg/test1.git
+git add .
+git commit -m "Initial commit"
+
+git branch -M main
+git push -u origin main
+git log
+
+If you want Page2.html to be a real webpage
+You MUST enable GitHub Pages.
+Step 1 — Go to
+https://github.com/aravisg/test1/settings/pages
+Step 2 — Under "Build and deployment"
+Select:
+•	Source: “Deploy from a branch”
+•	Branch: main
+•	Folder: / (root)
+Click Save.
+
+----
+1. Delete the GitHub Repository
+1.	Go to your repo:
+https://github.com/aravisg/test1
+2.	Click Settings (top menu).
+3.	Scroll to the bottom → “Danger Zone”.
+4.	Click Delete this repository.
+5.	Type the repo name to confirm.
+This removes all source code from GitHub permanently.
+
+2. Delete the Streamlit app
+Streamlit Cloud automatically keeps apps linked to GitHub.
+1.	Go to Streamlit Cloud dashboard:
+https://share.streamlit.io
+2.	Log in.
+3.	Find the app named test1.
+4.	Click ••• (three dots) → Delete app.
+Since the GitHub repo is deleted, Streamlit cannot redeploy it.
+------------------------------
